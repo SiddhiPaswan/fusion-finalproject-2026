@@ -14,7 +14,9 @@
   - Added Jenkins user to Docker group
 
 
-![EC2 User Data Setup](ec2-intsance.png)
+<img src="ec2-instance.png" alt="EC2 Instance" width="600"/>
+
+
 
 
 
