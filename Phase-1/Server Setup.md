@@ -1,0 +1,138 @@
+1. EC2 Instance (Jenkins Server)
+
+Created Amazon Linux EC2 instance
+
+Opened ports:
+
+22 (SSH)
+
+8080 (Jenkins)
+
+Attached IAM role for:
+
+EC2
+
+EKS
+
+ECR (if required)
+
+2. Install Required Packages (Using User Data)
+
+Installed Java 21
+
+Installed Git
+
+Added Jenkins repository
+
+Installed Jenkins
+
+Installed Docker
+
+Started and enabled Jenkins service
+
+Started and enabled Docker service
+
+Added Jenkins user to Docker group
+
+#!/bin/bash
+sudo yum update -y
+sudo yum install java-21 -y
+sudo yum install git -y
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo yum install jenkins -y
+sudo yum install docker -y
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker jenkins
+
+3. Jenkins Setup
+
+Accessed Jenkins on port 8080
+
+Unlocked Jenkins using initial admin password
+
+Installed required plugins:
+
+Git
+
+Maven
+
+Docker
+
+Kubernetes
+
+Configured tools:
+
+JDK
+
+Maven
+
+4. GitHub Repository
+
+Created GitHub repository
+
+Added application source code
+
+Used GitHub token for authentication
+
+Connected Jenkins to GitHub repository
+
+5. Jenkins Credentials
+
+Added DockerHub credentials in Jenkins
+
+Stored credentials securely (not in code)
+
+Used credentials inside pipeline using withCredentials
+
+6. Jenkins Pipeline (CI)
+
+Checked out code from GitHub
+
+Built application using Maven
+
+Created Docker image
+
+Pushed Docker image to DockerHub
+
+7. Docker
+
+Wrote Dockerfile
+
+Built Docker image in Jenkins
+
+Tagged Docker image
+
+Pushed image to DockerHub registry
+
+8. Amazon EKS
+
+Created EKS cluster
+
+Created worker nodes (EC2)
+
+Attached IAM role to worker nodes
+
+Configured kubectl access
+
+9. Kubernetes Deployment (CD)
+
+Created Kubernetes Deployment YAML
+
+Deployed Docker image to EKS
+
+Created Service (LoadBalancer)
+
+Application accessed using LoadBalancer DNS
+
+🔹 One-Line Notes (Very Short)
+
+EC2 → Jenkins installed
+
+Jenkins → CI pipeline created
+
+Docker → Image build & push
+
+EKS → Kubernetes deployment
