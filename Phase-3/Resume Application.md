@@ -28,7 +28,8 @@ This section displays:
 - Download Resume button
 - Contact details
 - Navigation menu
-- 
+[Click here to watch the full deployment demo](video/resume-demo.mp4)
+
 ![Final Web Application - Header](images/resume-11.png)
 
 
