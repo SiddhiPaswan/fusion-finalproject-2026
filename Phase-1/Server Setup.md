@@ -14,9 +14,8 @@
   - Added Jenkins user to Docker group
 
 
-<img src="ec2-instance.png" alt="EC2 Instance" width="600"/>
 
-
+    ![alt text](ec2-intsance-1.png)
 
 
 
@@ -100,70 +99,3 @@ sudo usermod -aG docker jenkins
      kubectl get ns  (it should give responce)
 
 
-1. GitHub Repository
-
-Created GitHub repository
-
-Added application source code
-
-Used GitHub token for authentication
-
-Connected Jenkins to GitHub repository
-
-5. Jenkins Credentials
-
-Added DockerHub credentials in Jenkins
-
-Stored credentials securely (not in code)
-
-Used credentials inside pipeline using withCredentials
-
-6. Jenkins Pipeline (CI)
-
-Checked out code from GitHub
-
-Built application using Maven
-
-Created Docker image
-
-Pushed Docker image to DockerHub
-
-7. Docker
-
-Wrote Dockerfile
-
-Built Docker image in Jenkins
-
-Tagged Docker image
-
-Pushed image to DockerHub registry
-
-8. Amazon EKS
-
-Created EKS cluster
-
-Created worker nodes (EC2)
-
-Attached IAM role to worker nodes
-
-Configured kubectl access
-
-9. Kubernetes Deployment (CD)
-
-Created Kubernetes Deployment YAML
-
-Deployed Docker image to EKS
-
-Created Service (LoadBalancer)
-
-Application accessed using LoadBalancer DNS
-
-🔹 One-Line Notes (Very Short)
-
-EC2 → Jenkins installed
-
-Jenkins → CI pipeline created
-
-Docker → Image build & push
-
-EKS → Kubernetes deployment
