@@ -15,7 +15,7 @@
 
 
 
-    ![alt text](ec2-intsance-1.png)
+    ![alt text](images/ec2-intsance-1.png)
 
 
 
@@ -62,11 +62,11 @@ sudo usermod -aG docker jenkins
       - `AmazonEKSWorkerNodePolicy`
   
   
--    ![alt text](eks-user.png)
+-    ![alt text](images/eks-user1.png)
 
--    ![alt text](eks-cluster.png)
+-    ![alt text](images/eks-cluster1.png)
 
--    ![alt text](nodes.png)
+-    ![alt text](images/nodes1.png)
   
 ## 3. EKS Cluster & Jump Server Setup
 
